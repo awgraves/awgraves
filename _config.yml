@@ -1,13 +1,13 @@
-title:             Clean Blog
-email:             your-email@example.com
-description:       A Blog Theme by Start Bootstrap
-author:            Start Bootstrap
-baseurl:           "/startbootstrap-clean-blog-jekyll"
-url:               "http://blackrockdigital.github.io"
+title:             Data Science
+email:             andrewgraves92@gmail.com
+description:       A Collection of Data Science Projects
+author:            Andrew Graves
+baseurl:           "/awgraves.github.io"
+url:               "http://awgraves.github.io"
 
 # Social Profiles
-twitter_username:  SBootstrap
-github_username:   BlackrockDigital
+twitter_username:  AWG_DS
+github_username:   awgraves
 facebook_username: StartBootstrap
 
 # Build settings

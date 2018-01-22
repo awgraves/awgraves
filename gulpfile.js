@@ -1,43 +1,68 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
+var prefix = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+var cache = require('gulp-cache');
+var cp = require('child_process');
+var browserSync = require('browser-sync');
 
-gulp.task('copy', function() {
+var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-  // Start Bootstrap Clean Blog SCSS
-  gulp.src(['node_modules/startbootstrap-clean-blog/scss/**/*'])
-    .pipe(gulp.dest('assets/vendor/startbootstrap-clean-blog/scss'))
+// Build the Jekyll Site
+gulp.task('jekyll-build', function (done) {
+    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
 
-  // Start Bootstrap Clean Blog JS
-  gulp.src([
-      'node_modules/startbootstrap-clean-blog/js/clean-blog.min.js',
-      'node_modules/startbootstrap-clean-blog/js/jqBootstrapValidation.js'
-    ])
-    .pipe(gulp.dest('assets/vendor/startbootstrap-clean-blog/js'))
+// Rebuild Jekyll and page reload
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
 
-  // Bootstrap
-  gulp.src([
-      'node_modules/bootstrap/dist/**/*',
-      '!**/npm.js',
-      '!**/bootstrap-theme.*',
-      '!**/*.map'
-    ])
-    .pipe(gulp.dest('assets/vendor/bootstrap'))
+// Wait for jekyll-build, then launch the Server
+gulp.task('browser-sync', ['sass', 'img', 'jekyll-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        },
+        notify: false
+    });
+});
 
-  // jQuery
-  gulp.src(['node_modules/jquery/dist/jquery.js', 'node_modules/jquery/dist/jquery.min.js'])
-    .pipe(gulp.dest('assets/vendor/jquery'))
+// Compile files
+gulp.task('sass', function () {
+    return gulp.src('assets/css/scss/main.scss')
+        .pipe(sass({
+            outputStyle: 'expanded',
+            onError: browserSync.notify
+        }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(gulp.dest('_site/assets/css'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('assets/css'));
+});
 
-  // Font Awesome
-  gulp.src([
-      'node_modules/font-awesome/**',
-      '!node_modules/font-awesome/**/*.map',
-      '!node_modules/font-awesome/.npmignore',
-      '!node_modules/font-awesome/*.txt',
-      '!node_modules/font-awesome/*.md',
-      '!node_modules/font-awesome/*.json'
-    ])
-    .pipe(gulp.dest('assets/vendor/font-awesome'))
+// Compression images
+gulp.task('img', function() {
+	return gulp.src('assets/img/**/*')
+		.pipe(cache(imagemin({
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		})))
+    .pipe(gulp.dest('_site/assets/img'))
+    .pipe(browserSync.reload({stream:true}));
+});
 
-})
+// Watch scss, html, img files
+gulp.task('watch', function () {
+    gulp.watch('assets/css/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/js/**/*.js', ['jekyll-rebuild']);
+    gulp.watch('assets/img/**/*', ['img']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_pages/*.html', '_posts/*'], ['jekyll-rebuild']);
+});
 
-// Default task
-gulp.task('default', ['copy']);
+//  Default task
+gulp.task('default', ['browser-sync', 'watch']);

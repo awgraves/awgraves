@@ -2,8 +2,8 @@ title:             Data Science
 email:             andrewgraves92@gmail.com
 description:       A Collection of Data Science Projects
 author:            Andrew Graves
-#baseurl:           "/awgraves.github.io"
-url:               "http://awgraves.github.io"
+baseurl:           "/awgraves.github.io"
+url:               "http://github.com/awgraves"
 
 # Social Profiles
 twitter_username:  AWG_DS

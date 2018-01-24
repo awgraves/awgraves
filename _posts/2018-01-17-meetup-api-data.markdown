@@ -17,9 +17,9 @@ The script outputs a CSV file containing the following information on each group
 	* name of group
 	* group id
 * Location
-	* city
- 	- precise latitude of meetup location
-	- precise longitude of meetup location
+	* city name
+ 	* precise latitude of meetup location
+	* precise longitude of meetup location
 * Group Attributes
 	* meetup category (Social, Tech, Arts, etc.)
 	* date & time of group creation (in local timezone)

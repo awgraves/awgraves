@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Creating Metrics to Rank Pittsburgh Tech Meetups - Andrew Graves Data Analyst</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Andrew Graves Data Analyst" property="og:site_name">
+  
+    <meta content="Creating Metrics to Rank Pittsburgh Tech Meetups" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" property="og:description">
+  
+  
+    <meta content="http://localhost:4000/pgh-tech/" property="og:url">
+  
+  
+    <meta content="2018-01-23T09:02:45-05:00" property="article:published_time">
+    <meta content="http://localhost:4000/about/" property="article:author">
+  
+  
+    <meta content="http://localhost:4000/assets/img//pgh_tech/Pittsburgh.jpg" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="meetup" property="article:tag">
+    
+    <meta content="analysis" property="article:tag">
+    
+    <meta content="jupyter notebook" property="article:tag">
+    
+    <meta content="Pittsburgh" property="article:tag">
+    
+  
+
+  
+    <meta name="twitter:card" content="">
+  
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@AWG_DS">
+  
+    <meta name="twitter:title" content="Creating Metrics to Rank Pittsburgh Tech Meetups">
+  
+  
+    <meta name="twitter:url" content="http://localhost:4000/pgh-tech/">
+  
+  
+    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+  
+  
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img//pgh_tech/Pittsburgh.jpg">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/light.jpg" alt="Andrew Graves"></a>
+      </div>
+      <div class="author-name">Andrew Graves</div>
+      <p>I am a self-taught data analyst with a social science background.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/AWG_DS" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/awgraves" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:andrewgraves92@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2018 &copy; Andrew Graves</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <img class="page-image" src=/assets/img//pgh_tech/Pittsburgh.jpg alt="Creating Metrics to Rank Pittsburgh Tech Meetups">
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Creating Metrics to Rank Pittsburgh Tech Meetups</h1>
+        <div class="page-date"><span>2018, Jan 23&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p align="center">
+<b>
+Using data collected from meetup.com to discover which user groups are at the heart of Pittsburgh's tech scene!</b>
+</p>
+<p><br /></p>
+
+<h2 id="pittsburgh-pa-a-place-for-tech">Pittsburgh, PA: A Place for Tech</h2>
+
+<p>After using my <a href="http://localhost:4000/meetup-api-data/">python script</a> to gather data on every registered meetup group in Pittsburgh, the first thing I wanted to know were the types of groups that were most popular.  There was one category that blew all the others out of the water…
+<br />
+<br /></p>
+<p align="center">
+<img src="http://localhost:4000/assets/img/pgh_tech/tech_groups_pgh.jpeg" alt="first" />
+</p>
+<p><br />
+<br /></p>
+
+<p>With such a large and vibrant tech scene, the question then became: <strong><em>which groups are the “top” groups in the area?</em></strong></p>
+
+<p>In order to answer this question we will need to choose the right metrics to define “top”.</p>
+
+<h2 id="membership-base">Membership Base</h2>
+
+<p>The most obvious place to begin is simply to see which groups have the most people:</p>
+
+<p><img src="http://localhost:4000/assets/img/pgh_tech/members_rank.png" alt="first" /></p>
+
+<p>Not bad!  Looks like the largest groups range between roughly 1,500 to 3,500 each.  Notice, however, that blah.</p>
+
+<h2 id="last-events-rsvp-count">Last Event’s RSVP count</h2>
+
+<p>Here we go.</p>
+
+<p><img src="http://localhost:4000/assets/img/pgh_tech/last_rsvp_rank.png" alt="first" /></p>
+
+<h2 id="event-frequency">Event Frequency</h2>
+
+<p><img src="http://localhost:4000/assets/img/pgh_tech/event_freq_rank.png" alt="first" /></p>
+
+<h1 id="final-verdict">Final Verdict:</h1>
+
+<p>By combining all three of our metrics we can compute an average score.</p>
+
+<p><img src="http://localhost:4000/assets/img/pgh_tech/final_score.png" alt="first" /></p>
+
+<p><strong>If you’d like to see how I did the analysis in more detail, check out the <a href="https://github.com/awgraves/meetup_api/blob/master/meetup_csv_gen.py">jupyter notebook</a> for this project.</strong></p>
+
+<p><a href="https://securecdn.pymnts.com/wp-content/uploads/2017/05/Pittsburgh.jpg">Title Photo Source</a></p>
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Creating Metrics to Rank Pittsburgh Tech Meetups&url=http://localhost:4000/pgh-tech/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/pgh-tech/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/pgh-tech/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#meetup" class="tag">&#35; meetup</a>
+          
+            <a href="/tags#analysis" class="tag">&#35; analysis</a>
+          
+            <a href="/tags#jupyter notebook" class="tag">&#35; jupyter notebook</a>
+          
+            <a href="/tags#Pittsburgh" class="tag">&#35; Pittsburgh</a>
+          
+        </div>
+      </div>
+      <section class="comment-area">
+  <div class="comment-wrapper">
+    
+  </div>
+</section> <!-- End Comment Area -->
+
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', '', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>

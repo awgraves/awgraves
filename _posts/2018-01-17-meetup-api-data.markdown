@@ -6,7 +6,7 @@ description:
 img: meetup_logo.png # Add image post (optional)
 tags: [python, api, meetup]
 ---
-**Automatically generate a dataset of every meetup group within a desired search radius!**
+**Save yourself time by automatically generating a dataset of every meetup group within a desired search radius!**
 
 
 ## Which information does it collect?

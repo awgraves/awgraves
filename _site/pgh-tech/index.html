@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Creating Metrics to Rank Pittsburgh Tech Meetups - Andrew Graves Data Analyst</title>
+	<title>Creating a Ranking System for Pittsburgh Tech Meetups - Andrew Graves Data Analyst</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Andrew Graves Data Analyst" property="og:site_name">
   
-    <meta content="Creating Metrics to Rank Pittsburgh Tech Meetups" property="og:title">
+    <meta content="Creating a Ranking System for Pittsburgh Tech Meetups" property="og:title">
   
   
     <meta content="article" property="og:type">
@@ -48,7 +48,7 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@AWG_DS">
   
-    <meta name="twitter:title" content="Creating Metrics to Rank Pittsburgh Tech Meetups">
+    <meta name="twitter:title" content="Creating a Ranking System for Pittsburgh Tech Meetups">
   
   
     <meta name="twitter:url" content="http://localhost:4000/pgh-tech/">
@@ -125,23 +125,23 @@
   <div class="page-content">
     
     <div class="page-cover-image">
-      <img class="page-image" src=/assets/img//pgh_tech/Pittsburgh.jpg alt="Creating Metrics to Rank Pittsburgh Tech Meetups">
+      <img class="page-image" src=/assets/img//pgh_tech/Pittsburgh.jpg alt="Creating a Ranking System for Pittsburgh Tech Meetups">
     </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">Creating Metrics to Rank Pittsburgh Tech Meetups</h1>
+        <h1 class="page-title">Creating a Ranking System for Pittsburgh Tech Meetups</h1>
         <div class="page-date"><span>2018, Jan 23&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       <p align="center">
 <b>
-Using data collected from meetup.com to discover which user groups are at the heart of Pittsburgh's tech scene!</b>
+Using data collected from meetup.com to discover which user groups are at the heart of Pittsburgh's tech scene</b>
 </p>
 <p><br /></p>
 
 <h2 id="pittsburgh-pa-a-place-for-tech">Pittsburgh, PA: A Place for Tech</h2>
 
-<p>After using my <a href="http://localhost:4000/meetup-api-data/">python script</a> to gather data on every registered meetup group in Pittsburgh, the first thing I wanted to know were the types of groups that were most popular.  There was one category that blew all the others out of the water…
+<p>After using <a href="http://localhost:4000/meetup-api-data/">my python script</a> to generate a dataset on every registered meetup group in Pittsburgh, the first question I asked myself was: <strong>what is the most popular meetup category?</strong>  The data quite clearly indicate…
 <br />
 <br /></p>
 <p align="center">
@@ -150,31 +150,68 @@ Using data collected from meetup.com to discover which user groups are at the he
 <p><br />
 <br /></p>
 
-<p>With such a large and vibrant tech scene, the question then became: <strong><em>which groups are the “top” groups in the area?</em></strong></p>
+<p>“Wow, Pittsburghers love their tech meetups!”, I thought.</p>
 
-<p>In order to answer this question we will need to choose the right metrics to define “top”.</p>
+<p>“But wouldn’t it be nice to know which of these 135 groups are the real ‘pillars’ of the meetup scene?”</p>
 
-<h2 id="membership-base">Membership Base</h2>
+<p>So my question then became: <strong><em>How can we use the data to rank the groups by order of importance?</em></strong></p>
+
+<p>Let’s see…</p>
+
+<p><br /></p>
+
+<h2 id="starting-with-membership-base">Starting with Membership Base</h2>
 
 <p>The most obvious place to begin is simply to see which groups have the most people:</p>
 
 <p><img src="http://localhost:4000/assets/img/pgh_tech/members_rank.png" alt="first" /></p>
 
-<p>Not bad!  Looks like the largest groups range between roughly 1,500 to 3,500 each.  Notice, however, that blah.</p>
+<p>Not bad!  It looks like the largest groups range between roughly 1,500 to 3,500 members each.</p>
 
-<h2 id="last-events-rsvp-count">Last Event’s RSVP count</h2>
+<p>However, looking over at the rsvp column, notice how large membership counts do not equal large event turnouts.</p>
 
-<p>Here we go.</p>
+<h2 id="rsvp-count-matters-too">RSVP Count Matters Too</h2>
+
+<p>The most thriving groups in the community should also have well-attended events, right?  Then let’s sort the groups by their most recent event RSVP:</p>
 
 <p><img src="http://localhost:4000/assets/img/pgh_tech/last_rsvp_rank.png" alt="first" /></p>
 
-<h2 id="event-frequency">Event Frequency</h2>
+<blockquote>
+  <p>NOTE: As any party host knows, RSVP counts hardly ever match actual turnout. But, since we are concerned with <strong><em>relative</em></strong> turnout between the groups, I would argue that RSVP count is still a sound metric for comparison.</p>
+</blockquote>
 
-<p><img src="http://localhost:4000/assets/img/pgh_tech/event_freq_rank.png" alt="first" /></p>
+<p>Looks good…<br />
+Wait!…one of the top groups by rsvp have only had 3 events in the past year!  I think any group we label as being “at the heart” of the tech scene should be a little more active, don’t you?</p>
 
-<h1 id="final-verdict">Final Verdict:</h1>
+<h2 id="so-how-can-we-measure-activity">So, How Can We Measure ‘Activity’?</h2>
 
-<p>By combining all three of our metrics we can compute an average score.</p>
+<p>This question is trickier than it first appears.</p>
+
+<p>We have a column for <strong><em>past event counts</em></strong> and at first this might seem like a good way to find the most active groups.  However, what about newer groups that have not been around long enough?  Using past event count would be biased towards older (but not necessarily more ‘active’) groups.</p>
+
+<p>We might also try ordering the groups by whoever had the most recent event, but this will not tell us <strong><em>how often</em></strong> events actually take place.</p>
+
+<p>I think a good solution here is to calculate the <strong><em>average wait time</em></strong> between hosted events.  We can do this by taking the <strong>age</strong> of the group divided by the <strong>number of past events</strong>.</p>
+
+<p>We now have a column <strong><em>event_freq</em></strong> with the average wait time measured in days.</p>
+
+<p><img src="http://localhost:4000/assets/img/pgh_tech/event_freq_rank.png" alt="first" />
+<br />
+<br /></p>
+<h1 id="pulling-it-all-together">Pulling it All Together:</h1>
+
+<h3 id="we-have-decided-on-3-dimensions-to-measure-the-importance-of-a-group">We have decided on 3 dimensions to measure the importance of a group:</h3>
+<ul>
+  <li>Membership</li>
+  <li>Most Recent RSVP Count</li>
+  <li>Event Frequency</li>
+</ul>
+
+<p>We want to rank the groups, so calculating <strong>percentile scores</strong> for each dimension will work well. (For example, a membership score of 90 means this group has more members than 90 percent of all other groups).</p>
+
+<p>To calculate the final score we will simply average the scores for the 3 dimensions.</p>
+
+<h3 id="our-top-10-most-important-tech-meetup-groups-in-pittsburgh">Our Top 10 Most Important Tech Meetup Groups in Pittsburgh:</h3>
 
 <p><img src="http://localhost:4000/assets/img/pgh_tech/final_score.png" alt="first" /></p>
 
@@ -184,7 +221,7 @@ Using data collected from meetup.com to discover which user groups are at the he
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=Creating Metrics to Rank Pittsburgh Tech Meetups&url=http://localhost:4000/pgh-tech/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=Creating a Ranking System for Pittsburgh Tech Meetups&url=http://localhost:4000/pgh-tech/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
           <a href="https://facebook.com/sharer.php?u=http://localhost:4000/pgh-tech/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
           <a href="https://plus.google.com/share?url=http://localhost:4000/pgh-tech/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>

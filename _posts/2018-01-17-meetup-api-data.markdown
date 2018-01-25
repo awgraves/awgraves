@@ -8,7 +8,7 @@ tags: [python, api, data cleaning]
 ---
 <p align = "center">
 <b>
-Save yourself time by automatically generating a cleaned dataset of all registered meetup groups within the location of your choosing!</b></p>
+Save yourself time by automatically generating a cleaned dataset of all registered meetup groups at a given location!</b></p>
 
 
 ## Which information is included?

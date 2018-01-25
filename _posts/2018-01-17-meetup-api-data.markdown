@@ -20,7 +20,7 @@ The script outputs a CSV file containing the following information on each group
 	* group id
 * Location
 	* city name
- 	* precise latitude of meetup location
+	* precise latitude of meetup location
 	* precise longitude of meetup location
 * Group Attributes
 	* meetup category (Social, Tech, Arts, etc.)
@@ -45,7 +45,7 @@ The script outputs a CSV file containing the following information on each group
 	````
 	python meetup_gen_csv.py
 	````
-4. You will be prompted for your meetup.com API key the first time. ***You will need to register a normal user account with [meetup.com](www.meetup.com/register) to obtain a key.***  This is only necessary the first time because the script will remember your key for any subsequent uses.
+4. You will be prompted for your meetup.com API key the first time. ***You will need to register a normal user account with [meetup.com](http://www.meetup.com/register) to obtain a key.***  This is only necessary the first time because the script will remember your key for any subsequent uses.
 
 	![first]({{site.url}}/assets/img/meetup_api_imgs/enter_api.png)
 
@@ -57,7 +57,7 @@ The script outputs a CSV file containing the following information on each group
 
 	![terminal output]({{site.baseurl}}/assets/img/meetup_api_imgs/successful_output.png)
 	
-7. That's it!  Your are now ready to open the file in your favorite program and see what insights it contains.
+7. That's it!  Your are now ready to open the file in your favorite program and discover what insights it has to offer.
 
 	![jupyter csv]({{site.baseurl}}/assets/img/meetup_api_imgs/jupyter_csv.png)
 

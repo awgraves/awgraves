@@ -167,27 +167,27 @@ However, looking over at the rsvp column, notice how large membership counts do 
 <br /></p>
 <h2 id="rsvp-count-matters-too">RSVP Count Matters Too</h2>
 
-<p>The most thriving groups in the community should also have well-attended events, right?  Then let’s sort the groups by their most recent event RSVP:</p>
+<p>The most thriving groups in the community should also have well-attended events, right?  Then let’s sort the groups by the RSVP count for their last hosted event:</p>
 
 <p><img src="http://localhost:4000/assets/img/pgh_tech/last_rsvp_rank.png" alt="first" /></p>
 
 <blockquote>
-  <p>NOTE: As any party host knows, RSVP counts hardly ever match actual turnout. But, since we are concerned with <strong><em>relative</em></strong> turnout between the groups, I would argue that RSVP count is still a sound metric for comparison.</p>
+  <p>NOTE: As any party host knows, RSVP counts hardly ever match actual turnout. But, since we are concerned with <strong><em>relative</em></strong> turnout between the groups, I would argue it is still a sound metric for comparison.</p>
 </blockquote>
 
-<p>Hmm…one of the top groups by rsvp have only had 3 events in the past year!  I think any group we label as being “at the heart” of the tech scene should be a little more active, don’t you? So…
+<p>Hmm…one of the top groups by rsvp has only had 3 events in the past year!  I think any group we label as being “at the heart” of the tech scene should be a little more active, don’t you? So…
 <br /></p>
 <h2 id="how-do-we-measure-activity">How Do We Measure Activity?</h2>
 
 <p>This question is trickier than it first appears.</p>
 
-<p>We have a column for <strong><em>past event counts</em></strong> and at first this might seem like a good way to find the most active groups.  However, what about newer groups that have not been around long enough?  Using past event count would give more weight to <strong><em>older</em></strong> (but not necessarily more <strong><em>active</em></strong>) groups.</p>
+<p>We have a column for <strong><em>past event counts</em></strong> that might initially seem like a straightforward way to find the most active groups.  However, using past event count would give more weight to <strong><em>older</em></strong> (but not necessarily more <strong><em>active</em></strong>) groups.  Think about a hypothetical group that has had 25 events over the last 100 years versus a group created last month with 5 events already!</p>
 
 <p>We might also try ordering the groups by whoever had the most recent event, but this will not tell us <strong><em>how often</em></strong> events actually take place.</p>
 
 <p>I think a good solution here is to calculate the <strong><em>average wait time</em></strong> between hosted events.  We can do this by taking the <strong>age</strong> of the group divided by the <strong>number of past events</strong>.</p>
 
-<p>We now have a column <strong><em>event_freq</em></strong> with the average wait time measured in days.</p>
+<p>We now have a column <strong><em>event_freq</em></strong> with the average wait time measured in days.  This is a much fairer way to compare old and new groups alike.</p>
 
 <p><img src="http://localhost:4000/assets/img/pgh_tech/event_freq_rank.png" alt="first" />
 <br />
@@ -196,14 +196,14 @@ However, looking over at the rsvp column, notice how large membership counts do 
 
 <h3 id="we-have-decided-on-3-dimensions-for-our-ranking-system">We have decided on 3 dimensions for our ranking system:</h3>
 <ul>
-  <li>Membership</li>
+  <li>Size of Membership Base</li>
   <li>Most Recent RSVP Count</li>
   <li>Event Frequency</li>
 </ul>
 
 <p>Since we are ranking our groups, calculating <strong>percentile scores</strong> for each dimension seems appropriate. (For example, a membership score of 90 means this group has more members than 90 percent of all other groups).</p>
 
-<p>Now we have all the information we need to average the dimensions and declare our winners.</p>
+<p>All that’s left to do now is to calculate the mean percentile scores across all dimensions and declare our winners.</p>
 
 <p><em>So…</em></p>
 

@@ -25,7 +25,7 @@
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/meetup_logo.png" property="og:image">
+    <meta content="http://localhost:4000/assets/img//meetup_api_imgs/clear_meetup_logo.png" property="og:image">
   
   
     
@@ -56,7 +56,7 @@
 ">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/meetup_logo.png">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img//meetup_api_imgs/clear_meetup_logo.png">
   
 
 	<meta name="description" content="">
@@ -123,7 +123,7 @@
   <div class="page-content">
     
     <div class="page-cover-image">
-      <img class="page-image" src=/assets/img/meetup_logo.png alt="User Friendly Python Script to Gather Meetup.com API Data">
+      <img class="page-image" src=/assets/img//meetup_api_imgs/clear_meetup_logo.png alt="User Friendly Python Script to Gather Meetup.com API Data">
     </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
@@ -148,8 +148,8 @@ Save yourself time by automatically generating a cleaned dataset of all register
   </li>
   <li>Location
     <ul>
-      <li>city name
- 	* precise latitude of meetup location</li>
+      <li>city name</li>
+      <li>precise latitude of meetup location</li>
       <li>precise longitude of meetup location</li>
     </ul>
   </li>
@@ -165,8 +165,8 @@ Save yourself time by automatically generating a cleaned dataset of all register
   <li>Past Events
     <ul>
       <li>number of previous events</li>
-      <li>date &amp; time of most recent past event (in local timezone)</li>
-      <li>number of ‘yes’ rsvps for most recent past event</li>
+      <li>date &amp; time of most recent event (in local timezone)</li>
+      <li>number of ‘yes’ rsvps for most recent event</li>
     </ul>
   </li>
 </ul>
@@ -174,7 +174,7 @@ Save yourself time by automatically generating a cleaned dataset of all register
 <h2 id="how-to-use-it">How to use it</h2>
 
 <blockquote>
-  <p><strong>Note that you must have python 3.6 installed along with the necessary libraries and modules described in the readme file of this script. I recommend the <a href="https://github.com/awgraves/meetup_api/blob/master/meetup_csv_gen.py">Anaconda distribution</a> of Python which includes everything you will need.</strong></p>
+  <p><strong>Note that you must have python 3.6 installed along with the necessary libraries and modules described in the readme file of this script. I recommend the <a href="https://www.anaconda.com/download/">Anaconda distribution</a> of Python which includes everything you will need.</strong></p>
 </blockquote>
 
 <ol>
@@ -189,7 +189,7 @@ Save yourself time by automatically generating a cleaned dataset of all register
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>You will be prompted for your meetup.com API key the first time. <strong><em>You will need to register a normal user account with <a href="www.meetup.com/register">meetup.com</a> to obtain a key.</em></strong>  This is only necessary the first time because the script will remember your key for any subsequent uses.</p>
+    <p>You will be prompted for your meetup.com API key the first time. <strong><em>You will need to register a normal user account with <a href="http://www.meetup.com/register">meetup.com</a> to obtain a key.</em></strong>  You need only enter this once; the script will remember your key for any subsequent uses.</p>
 
     <p><img src="http://localhost:4000/assets/img/meetup_api_imgs/enter_api.png" alt="first" /></p>
   </li>
@@ -199,18 +199,18 @@ Save yourself time by automatically generating a cleaned dataset of all register
     <p><img src="/assets/img/meetup_api_imgs/zipcode.png" alt="search zip" /></p>
   </li>
   <li>
-    <p>If all your inputs were valid, the script will make all the necessary server requests, clean and organize the data, then export a CSV file in the same folder.</p>
+    <p>If all your inputs were valid, the script will make all the necessary server requests, clean and organize the data, then export a CSV file for you.</p>
 
     <p><img src="/assets/img/meetup_api_imgs/successful_output.png" alt="terminal output" /></p>
   </li>
   <li>
-    <p>That’s it!  Your are now ready to open the file in your favorite program and see what insights it contains.</p>
+    <p>That’s it!  Your are now ready to open the file in your favorite program and discover the insights it has to offer.</p>
 
     <p><img src="/assets/img/meetup_api_imgs/jupyter_csv.png" alt="jupyter csv" /></p>
   </li>
 </ol>
 
-<p><strong>If you want to see how it works under the hood, <a href="https://github.com/awgraves/meetup_api/blob/master/meetup_csv_gen.py">check out the code</a> for yourself.  Don’t worry, I was courteous with line comments.</strong></p>
+<p><strong>If you want to see how it works under the hood, <a href="https://github.com/awgraves/meetup_api/blob/master/meetup_csv_gen.py">check out the code</a> for yourself.</strong></p>
 
 
       <div class="page-footer">

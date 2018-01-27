@@ -169,15 +169,17 @@ However, looking over at the rsvp column, notice how large membership counts do 
 <br /></p>
 <h2 id="rsvp-count-matters-too">RSVP Count Matters Too</h2>
 
-<p>The most prominent groups in the community should also have well-attended events, right?  Then let’s sort the groups by the RSVP count for their last hosted event:</p>
+<p>The most popular groups in the community should also have well-attended events, right?  Then we should definitely include RSVP counts in our ranking system.</p>
 
-<p><img src="http://localhost:4000/assets/img/pgh_tech/last_rsvp_rank.png" alt="first" /></p>
+<p><strong><em>But wait!</em></strong> Instead of using the counts from a single event, let’s make this metric a little more reliable by looking at the <strong><em>last five hosted events</em></strong> for each group and find the <strong>mean RSVP</strong>.</p>
 
-<blockquote>
-  <p>NOTE: As any party host knows, RSVP counts hardly ever match actual turnout. But, since we are concerned with <strong><em>relative</em></strong> turnout between the groups, I would argue it is still a sound metric for comparison.</p>
-</blockquote>
+<p>Five events should be robust enough to be representative, yet at the same time, small enough to keep the info as current as possible. <em>If a group has less than 5 total events, we will take the mean of however many they have.</em></p>
 
-<p>Hmm…one of the top groups by rsvp has only had 3 events in the past year!  I think any group we label as being “at the heart” of the tech scene should be a little more active, don’t you? So…
+<p>Once we gather the necessary data from the meetup.com API and sort our groups accordingly, we get this:</p>
+
+<p><img src="http://localhost:4000/assets/img/pgh_tech/mean_rsvp.png" alt="first" /></p>
+
+<p>Hmm…one of the top groups by RSVP has only had 3 events in the past year!  I think any group we label as being “at the heart” of the tech scene should be a little more active, don’t you? So…
 <br /></p>
 <h2 id="how-do-we-measure-activity">How Do We Measure Activity?</h2>
 
@@ -191,7 +193,7 @@ However, looking over at the rsvp column, notice how large membership counts do 
 
 <p>We now have a column <strong><em>event_freq</em></strong> with the average wait time measured in days.  This is a much fairer way to compare old and new groups alike.</p>
 
-<p><img src="http://localhost:4000/assets/img/pgh_tech/event_freq_rank.png" alt="first" />
+<p><img src="http://localhost:4000/assets/img/pgh_tech/event_freq.png" alt="first" />
 <br />
 <br /></p>
 <h1 id="pulling-it-all-together">Pulling it All Together:</h1>
@@ -199,7 +201,7 @@ However, looking over at the rsvp column, notice how large membership counts do 
 <h3 id="we-have-decided-on-3-dimensions-for-our-ranking-system">We have decided on 3 dimensions for our ranking system:</h3>
 <ul>
   <li>Size of Membership Base</li>
-  <li>Most Recent RSVP Count</li>
+  <li>Mean RSVP Count</li>
   <li>Event Frequency</li>
 </ul>
 
@@ -213,6 +215,11 @@ However, looking over at the rsvp column, notice how large membership counts do 
 <h1 id="our-top-10-most-prominent-tech-meetup-groups-in-pittsburgh">Our Top 10 Most Prominent Tech Meetup Groups in Pittsburgh:</h1>
 
 <p><img src="http://localhost:4000/assets/img/pgh_tech/final_score_rank.png" alt="first" /></p>
+
+<p><br /></p>
+<blockquote>
+  <p>UPDATED 1/27/2018: The original analysis from 1/23/2018 used the most recent RSVP count instead of a calculated mean. If you want to see those original results, click <a href="http://localhost:4000/assets/img/pgh_tech/Originals/final_score_rank.png">here</a>. <strong><em>Special thanks</em></strong> to Jon for his suggestion (even though it did bump his group off the top 10!)</p>
+</blockquote>
 
 <p><strong>If you’d like to see how I did the analysis in more detail, check out the <a href="https://github.com/awgraves/pgh_tech/blob/master/Discovering%20the%20Top%20Tech%20Groups%20in%20Pittsburgh.ipynb">jupyter notebook</a> for this project.</strong></p>
 

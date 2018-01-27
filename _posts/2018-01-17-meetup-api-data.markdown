@@ -17,7 +17,7 @@ The script outputs a CSV file containing the following information on each group
 
 * Basic Info
 	* name of group
-	* group id
+	* group url name (meetup.com/...)
 * Location
 	* city name
 	* approx. latitude of meetup location

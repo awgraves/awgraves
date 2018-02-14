@@ -34,7 +34,7 @@ Using Google Sheets to build an interactive crop management program for farmers 
             </div>
           </div>
           <div class="image">
-            <img src="../assets/img/aquaponics/semillado.jpg">
+            <img src="../assets/img/aquaponics/semillado.JPG">
           </div>
         </div>
         <div class="slider">
@@ -46,7 +46,7 @@ Using Google Sheets to build an interactive crop management program for farmers 
             </div>
           </div>
           <div class="image">
-            <img src="../assets/img/aquaponics/me.jpg">
+            <img src="../assets/img/aquaponics/me.JPG">
           </div>
         </div>
         <div class="slider">

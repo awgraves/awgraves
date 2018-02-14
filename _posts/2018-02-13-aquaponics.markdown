@@ -116,7 +116,7 @@ It is a unique way to grow plants and raise fish together without any soil!  Lea
 
 <br>
 ## Wouldn't this software work for traditional farming methods too?
-Sure!  I chose to design this for the aquaponics system at [Finca Taino](http://tainofarm.com/) due to the popularity of the crops being grown as well as the shorter growth cycles that result from this special farming method - the quicker the growth the greater the potential volume of output!
+Sure!  I chose to design this for the aquaponics system at [Finca Taino](http://tainofarm.com/) due to the popularity of the crops being grown as well as the shorter growth cycles that result from this special farming method - the quicker the growth the greater the potential volume of output.
 <br>
 
 # *See it in action!*

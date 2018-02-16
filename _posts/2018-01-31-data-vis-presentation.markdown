@@ -3,7 +3,7 @@ layout: post
 title: Data Visualization Fundamentals
 date: 2018-01-31 10:02:45
 description: A whimsical presentation given at the University of Pittsburgh's Data Dojo club.
-img: /data_fundamentals/slide_preview.png # Add image post (optional)
+img: data_fundamentals/slide_preview.png # Add image post (optional)
 tags: [powerpoint presentations]
 ---
 <p align = "center">

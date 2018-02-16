@@ -6,6 +6,7 @@ baseurl: #"/awgraves.github.io" # the subpath of your site, e.g. /blog
 url: "http://awgraves.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 site-twitter: #if your site has a twitter account, enter it here
 
+
 # Author Settings
 author: Andrew Graves
 author-img: light.jpg # add your photo

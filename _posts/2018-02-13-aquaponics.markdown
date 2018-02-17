@@ -2,7 +2,7 @@
 layout: post
 title: Aquaponics Crop Management "Software"
 date: 2018-02-13 10:02:45
-description: That time I created management "software" for farmers utilizing only spreadsheets.
+description: Using Google Sheets to build an interactive crop management program for farmers in the Dominican Republic
 img: aquaponics/aquaponics.jpg # Add image post (optional)
 tags: [Excel, SQL]
 ---

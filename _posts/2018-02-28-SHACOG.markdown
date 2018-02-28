@@ -1,0 +1,37 @@
+---
+layout: post
+title: Visualizing Local Govt Spending
+date: 2018-02-28 11:23:45
+description: Explore the budgets for all 22 members of the South Hills Area Council of Governments with this interactive map!
+img: SHACOG/map.PNG # Add image post (optional)
+tags: [Tableau, Data Visualization, Combining Data Sources]
+---
+<p align = "center">
+<b>
+Explore the budgets for all 22 members of the South Hills Area Council of Governments with this interactive map!
+
+</b>
+</p>
+<br>
+
+<div class='tableauPlaceholder' id='viz1519760699431' style='position: relative'>
+<noscript><a href='#'><img alt='SHACOG 2017 Budgets ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SH&#47;SHACOGLocalGovt2017BudgetedSpending&#47;SHACOG2017Budgets&#47;1_rss.png' style='border: none' /></a></noscript>
+<object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SHACOGLocalGovt2017BudgetedSpending&#47;SHACOG2017Budgets' /><param name='tabs' value='no' /><param name='toolbar' value='no' />
+<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SH&#47;SHACOGLocalGovt2017BudgetedSpending&#47;SHACOG2017Budgets&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object>
+</div>
+<script type='text/javascript'>var divElement = document.getElementById('viz1519760699431'); var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='847px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+
+# What is SHACOG?
+The ***South Hills Area Council of Governments*** is a 22 member local government organization located primarily in the lower part of the greater Pittsburgh area.  Member representatives assemble to exchange information and collaborate on common issues. Learn more on their [website](https://www.shacog.com/).
+<br>
+# Where are the data sources?
+**Budgets** - Each municipality either posted the documents online or made them available upon request.  If you ***click on a municipality*** on the map you can choose to view the source document for that particular government.
+
+**Census** - [2016 US Census population estimates](https://www.census.gov/quickfacts/fact/table/US/PST045217) were joined with the budget data to calculate per capita spending.
+
+**Spatial Data** - [PSDA](http://www.pasda.psu.edu/uci/DataSummary.aspx?dataset=41) provided the mapping data used to draw the municipal boundaries.
+<br>
+# What is included under "other"?
+It includes mostly things like **pension contributions, insurance payments, and debt servicing,** as well as relatively smaller departments like **emergency dispatch, planning & zoning, crossing guards and animal control.**
+
+For a ***full explaination*** of how the budget data was aggregated (including how the categories were determined), see the [readme file](https://github.com/awgraves/SHACOG) for the dataset.

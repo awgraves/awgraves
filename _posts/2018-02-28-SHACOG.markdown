@@ -3,7 +3,7 @@ layout: post
 title: Visualizing Local Govt Spending
 date: 2018-02-28 11:23:45
 description: Explore the budgets for all 22 members of the South Hills Area Council of Governments with this interactive map!
-img: SHACOG/map.PNG # Add image post (optional)
+img: SHACOG/map.png # Add image post (optional)
 tags: [Tableau, Data Visualization, Combining Data Sources]
 ---
 <p align = "center">

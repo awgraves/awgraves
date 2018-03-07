@@ -34,4 +34,5 @@ The ***South Hills Area Council of Governments*** is a 22 member local governmen
 # What is included under "other"?
 It includes mostly things like **pension contributions, insurance payments, and debt servicing,** as well as relatively smaller departments like **emergency dispatch, planning & zoning, crossing guards and animal control.**
 
-For a ***full explanation*** of how the budget data was aggregated (including how the categories were determined), see the [readme file](https://github.com/awgraves/SHACOG) for the dataset.
+<br>
+***For a full explanation of how the budget data was aggregated (including how the categories were determined), see the [readme file](https://github.com/awgraves/SHACOG) for the dataset.***

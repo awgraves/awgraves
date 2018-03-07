@@ -4,7 +4,7 @@ title: User Friendly Python Script to Gather Meetup.com API Data
 date: 2018-01-17 13:32:20
 description: User Friendly Python Script to Gather Meetup.com API Data
 img: meetup_api_imgs/clear_meetup_logo.png # Add image post (optional)
-tags: [python, api, data cleaning]
+tags: [Python, APIs, Data Wrangling]
 ---
 <p align = "center">
 <b>

@@ -2,6 +2,7 @@
 layout: main
 img: site_preview.png
 ---
+
 <link rel="icon" 
      type="image/png" 
      href="{{site.url}}/assets/img/favicon.png">
@@ -18,6 +19,7 @@ img: site_preview.png
     <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
   </div>
 </article>
+
 {% endfor %}
 
 {% include pagination.html %}

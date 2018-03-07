@@ -112,7 +112,7 @@ Using Google Sheets to build an interactive crop management program for farmers 
 
 <br>
 ## What is aquaponics?
-It is a unique way to grow plants and raise fish together without any soil!  Learn more [here](https://www.theaquaponicsource.com/what-is-aquaponics/).
+It is a unique way to grow plants and raise fish together without any soil.  Learn more [here](https://www.theaquaponicsource.com/what-is-aquaponics/).
 
 <br>
 ## Wouldn't this software work for traditional farming methods too?

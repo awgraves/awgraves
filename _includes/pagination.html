@@ -1,4 +1,5 @@
 <div class="container">
+<a href = "{{site.baseurl}}/tags">List Projects By Skill</a>
   <nav class="pagination" role="pagination">
     <ul>
       {% if paginator.previous_page %}
@@ -9,7 +10,7 @@
         {% endif %}
       {% endif %}
 
-      <p><span class="page-number">Page {{paginator.page}} of {{paginator.total_pages}}	-- <a href = "{{site.baseurl}}/tags">List Projects By Skill</a></span></p>
+      <p><span class="page-number"></span></p>
 
       {% if paginator.next_page %}
       <p><a class="older-posts" href="{{ site.baseurl }}/page/{{ paginator.next_page }}/"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></p>
@@ -19,3 +20,6 @@
 
 
 </div>
+
+<!-- copy this between "class = page-number" and /span: Page {{paginator.page}} of {{paginator.total_pages}}	--  -->
+<!-- place the top href list projects by... on same line as the paginator after the --  -->

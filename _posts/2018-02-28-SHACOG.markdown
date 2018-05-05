@@ -8,7 +8,7 @@ tags: [Tableau, Data Visualization, Combining Data Sources]
 ---
 <p align = "center">
 <b>
-Explore the budgets for all 22 members of the South Hills Area Council of Governments with this interactive map!
+Explore the budgets for all 22 members of the South Hills Area Council of Governments with this interactive map
 
 </b>
 </p>
